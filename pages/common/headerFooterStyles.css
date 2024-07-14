@@ -1,0 +1,239 @@
+@import url( "baseCommonStyles.css" );
+
+* { 
+    color: var( --light-theme-foreground-color );
+    font-family:'Segoe UI';
+    font-size: 16pt;
+}
+
+.HeaderLogoBannerDivClass {
+    position: relative;
+    margin-left: -.4%;
+    margin-right: -.4%;
+    padding-bottom: 2%;
+    display: grid;
+    place-items: center;
+    height: 400px;
+    
+    img {
+        cursor: pointer;
+    }
+}
+
+.HeaderLogoBannerDivClass::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url( "images/HeaderBackgroundBanner_KryptonVet.png" );
+    background-position: top;
+    background-size: contain;
+    filter: blur( 20px ) brightness( .7 );
+}
+
+.HeaderLinksClass {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var( --kryptonvet-foreground-dark-color );
+    margin-left: -3.1%; 
+    margin-right: -3%;
+    margin-top: -12vh;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+}
+
+.MainMenuClass {
+    li a {
+        padding-inline: 1.8vw;
+    }
+
+    li a:hover{
+        background-color: var( --kryptonvet-background-dark-color );
+        color: var( --dark-theme-accent-color );
+        font-weight: bold;
+        transition: background-color .27s; /* Smooth transition on hover */
+    }
+}
+
+nav {
+    display: grid;
+    
+    ul {
+        list-style-type: none; /* Quitamos las viñetas de la lista */
+    }
+
+    li {
+        display: inline;
+
+        a {  
+            text-decoration: none;
+            padding-top: 4.5vh;
+            padding-bottom: 4.5vh;
+            transition: background-color .1s;
+
+            &:link {
+                text-decoration: none;
+                color: var( --dark-theme-foreground-color );
+            }
+
+            &:visited {
+                color: var( --dark-theme-accent-color );
+            }
+        }
+    }
+}
+
+#footerMainSectionDivId {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.SocialLinks {
+    display: block;
+}
+
+footer {
+    background-color: var( --kryptonvet-foreground-light-color );
+    margin-left: -2.1%;
+    margin-right: -2%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+        padding-top: 2vh;
+        padding-inline: 1.4vw;
+    }
+
+    address, a {
+        font-size: 14pt;
+        line-height: 30pt;
+        font-style: normal;
+    }
+
+    #contactenosAddressId {
+        padding-left: 1.5vw;
+    }
+
+    #addressIconId {
+        position: absolute;
+        margin-top: 1.94vh;
+        margin-left: -1.5vw;
+        filter: brightness(0) saturate(100%) invert(11%) sepia(35%) saturate(1102%) hue-rotate(141deg) brightness(96%) contrast(101%);
+    }
+
+    a {
+        &:link {
+            text-decoration: none;
+        }
+
+        &:hover { 
+            text-decoration: underline;
+        }
+    }
+
+    #footerKryptonVetLogoDivId {
+        margin-inline: 0;
+        padding-inline: 0;
+    }
+
+    #footerKryptonVetLogoLinkId {
+        margin-inline: 0;
+        padding-inline: 0;
+    }
+
+    #socialsAndFreepikDivId {
+        padding-right: 0;
+        width: fit-content;
+    }
+
+    #socialsLinksDivId, #freepikDivId {
+        padding-top: 0;
+        width: fit-content;
+    }
+
+    #socialLinksNavId {
+        padding-top: 0;
+        padding-inline: 0;
+        padding-bottom: 0;
+        margin-left: -3vw;
+        margin-top: -3vh;
+        height: 15vh;
+        width: fit-content;
+    }
+
+    #FreepikLogoId {
+        margin-top: 2vh;
+        margin-left: .5vw;
+    }
+
+    #FCMFLogoImgId {
+        position: absolute;
+        margin-left: 20.3vw;
+        margin-top: -6vh;
+        height: 65px;
+    }
+
+    #UGLogoImgId {
+        position: absolute;
+        margin-left: 0vw;
+        margin-top: -10vh;
+        height: 50px;
+    }
+
+    #CSLogoImgId {
+        position: absolute;
+        margin-left: -33.5vw;
+        margin-top: 3vh;
+        height: 55px;
+        opacity: 0.7;
+    }
+
+    #socialLinksNavId, #freepikDivId {
+        li a {
+            padding-inline: 1.2vw;
+        }
+
+        a {
+            img {
+                opacity: 0.8;
+                transition: scale .1s ease, opacity .1s ease;
+            }
+
+            &:hover {                 
+                img {
+                    opacity: 1;
+                    scale: 1.2;
+                    transition: scale .3s ease, opacity .3s ease;
+                }
+            }
+        }
+    }
+
+    #copyrightSignDivId {
+        text-align: center;
+        width: 100vw;
+        
+        h7, strong {
+            font-size: 12pt;
+        }
+
+        h7 {
+            line-height: 40pt;
+    
+        }
+    }
+}
+
+body {
+    transition: background-color 0.5s ease;
+    background-color: var( --light-theme-background-color );
+}

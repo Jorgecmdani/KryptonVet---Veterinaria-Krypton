@@ -1,0 +1,198 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
+:root {
+    --dark-theme-background-color: #222222;
+    --dark-theme-foreground-color: #F7F1FF;
+    --dark-theme-accent-color: #FAF5D0;
+    --light-theme-background-color: #f0f8f8;
+    --light-theme-foreground-color: #444444;
+    --light-theme-accent-color: #3B3B3B;
+}
+
+.theme-switch-wrapper {
+    position: absolute;
+    top: 2.5%;
+    margin-left: 3%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.theme-switch:hover {
+    .slider:before{
+        box-shadow: 0 0 10px var( --light-theme-accent-color );
+    }
+
+    input:checked + .slider:before {
+        box-shadow: 0 0 10px var( --dark-theme-accent-color );
+    }
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var( --dark-theme-accent-color );
+    transition: .4s;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    outline-offset: 5px;
+
+    @media (hover: none) {
+        --size: 48px;
+    }
+}
+
+.slider:before {
+    position: inherit;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var( --light-theme-foreground-color );
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var( --light-theme-foreground-color );
+
+    .sun-and-moon{
+        transition: transform translateX( 50% );
+    }
+}
+
+input:checked + .slider:before {
+    background-color: var( --dark-theme-accent-color );
+    transform: translateX( 37px );
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+body {
+    transition: background-color .3s ease;
+    color: var( --light-theme-foreground-color );
+    background-color: var( --light-theme-background-color );
+    
+    nav li a:link {
+        color: var( --light-theme-accent-color );
+    }
+
+    #ClarkId {
+        padding-left: 0px;
+        color: var( --light-theme-accent-color );
+    }
+}
+
+.sun-and-moon {                                                         
+    position: relative;
+    padding-left: 0%;
+    margin-left: -90%;
+    margin-top: -73%;
+    box-sizing: content-box;
+    display: flex;
+    transition: transform .3s linear;
+
+    & > .sun {
+        transition: transform .5s var( --ease-elastic-3 );
+    }
+
+    & > :is(.moon, .sun, .sun-beams) {
+        transform-origin: center center;
+    }
+  
+    & > :is(.moon, .sun) {
+        fill: var( --dark-theme-accent-color );
+    }
+  
+    & > .sun-beams {
+        stroke: var( --dark-theme-accent-color );
+        stroke-width: 2px;
+        stroke-linecap: round;
+        transition: transform .5s var( --ease-elastic-4 ), opacity .5s var( --ease-3 );
+    }
+
+    & .moon > circle {
+        transition: transform .25s var( --ease-out-5 );
+  
+        @supports ( cx: 1 ) {
+            transition: cx .25s var( --ease-out-5 );
+        }
+    }
+}
+
+body.dark-mode {
+    transition: background-color .3s ease;
+    background-color: var( --dark-theme-background-color );
+    color: var( --dark-theme-foreground-color );
+
+    h1, h2, h3, b, strong {
+        color: var( --dark-theme-accent-color );
+    }
+
+    nav li a:link {
+        color: var( --dark-theme-accent-color );
+    }
+
+    nav li a:visited {
+        color: #ff4c20;
+    }
+
+    #ClarkId {
+        padding-left: 0px;
+        color: var( --dark-theme-accent-color );
+    }
+
+    .sun-and-moon {  
+        transform: translateX( 85% );
+
+        .sun {
+            transform: scale( 1.75 );
+            transition-timing-function: var( --ease-3 );
+            transition-duration: .25s;
+        }
+
+        & > :is(.moon, .sun) {
+            fill: var( --light-theme-accent-color );
+        }
+
+        & > .sun-beams {
+            opacity: 0;
+            transform: rotateZ( -25deg );
+            transition-duration: .15s;
+        }
+
+        & > .moon > circle {
+            transform: translateX( -7px );
+            transition-delay: .25s;
+            transition-duration: .5s;
+
+            @supports ( cx: 1 ) {
+                transform: translateX( 0 );
+                cx: 17;
+            }
+        }   
+    }
+}

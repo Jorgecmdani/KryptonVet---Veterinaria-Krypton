@@ -1,0 +1,15 @@
+:root {
+    --dark-theme-background-color: #222222;
+    --dark-theme-foreground-color: #F7F1FF;
+    --dark-theme-accent-color: #FAF5D0;
+    --light-theme-background-color: #f0f8f8;
+    --light-theme-foreground-color: #444444; /* midnightblue; */
+    --light-theme-accent-color: #3B3B3B;
+    --kryptonvet-background-dark-color: #00222b;
+    --kryptonvet-background-light-color: #c1d7d4;
+    --kryptonvet-background-accent-color: #478189;
+    --kryptonvet-foreground-dark-color: #d36b10;
+    --kryptonvet-button-hover-color: #fc8217;
+    --kryptonvet-button-pressed-color: #a5540d;
+    --kryptonvet-foreground-light-color: #ffad7b;
+}
