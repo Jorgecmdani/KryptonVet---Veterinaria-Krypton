@@ -36,7 +36,7 @@ Se está trabajando en el proyecto, practicando y haciendo cambios constantes al
 * El logo se creó utilizando IA, se usó Miscrosoft Copilot, la cual usó internamente DALL-E 3 para crear el logo, luego se lo refinó y se diseño manualmente la parte textual usando GIMP, componiento un imagotipo, el cual es el logo actual.
 * Las imágenes en algunos casos también fueron refinadas y editadas para un mejor aspecto, más adecuado y un acabado más profesional.
 
-## ![ClarkCodes Logo OnTransparent_100x100px_300ppi](https://user-images.githubusercontent.com/39943822/235443512-3ab382e8-888e-4d2d-87ba-1c8f4ef3ec45.png) Hey what's up man!, soy Clark, el creador de Smallville Clock.
+## ![ClarkCodes Logo OnTransparent_100x100px_300ppi](https://user-images.githubusercontent.com/39943822/235443512-3ab382e8-888e-4d2d-87ba-1c8f4ef3ec45.png) Hey what's up man!, soy Clark.
 [![Twitter Follow](https://img.shields.io/twitter/follow/ClarkCodes?style=social)](https://twitter.com/clarkcodes)
 [![GitHub Followers](https://img.shields.io/github/followers/ClarkCodes?style=social)](https://github.com/ClarkCodes)
 
